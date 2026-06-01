@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClearMind - Login / Registro</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="page-container">
+    <section class="auth-panel" aria-label="Panel de autenticación">
+      <header class="auth-header">
+        <h1>ClearMind</h1>
+        <p>Monitorea tu bienestar académico con un acceso seguro.</p>
+      </header>
+      <div class="auth-switch">
+        <button id="btn-login" class="switch-button active">Iniciar sesión</button>
+        <button id="btn-register" class="switch-button">Registrarse</button>
+      </div>
+
+      <form id="login-form" class="auth-form active" autocomplete="off">
+        <label for="login-email">Correo electrónico</label>
+        <input id="login-email" type="email" placeholder="ejemplo@universidad.edu" required />
+
+        <label for="login-password">Contraseña</label>
+        <input id="login-password" type="password" placeholder="Contraseña" required minlength="6" />
+
+        <button type="submit" class="primary-button">Entrar</button>
+        <p class="form-message" id="login-message"></p>
+      </form>
+
+      <form id="register-form" class="auth-form" autocomplete="off">
+        <label for="register-name">Nombre completo</label>
+        <input id="register-name" type="text" placeholder="Tu nombre" required />
+
+        <label for="register-email">Correo electrónico</label>
+        <input id="register-email" type="email" placeholder="ejemplo@universidad.edu" required />
+
+        <div class="field-group">
+          <div>
+            <label for="register-career">Carrera</label>
+            <input id="register-career" type="text" placeholder="Ingeniería" required />
+          </div>
+          <div>
+            <label for="register-semester">Semestre</label>
+            <input id="register-semester" type="number" placeholder="5" min="1" max="12" required />
+          </div>
+        </div>
+
+        <label for="register-password">Contraseña</label>
+        <input id="register-password" type="password" placeholder="Mínimo 6 caracteres" required minlength="6" />
+
+        <label for="register-confirm-password">Confirmar contraseña</label>
+        <input id="register-confirm-password" type="password" placeholder="Repite la contraseña" required minlength="6" />
+
+        <button type="submit" class="primary-button">Crear cuenta</button>
+        <p class="form-message" id="register-message"></p>
+      </form>
+    </section>
+
+    <section id="dashboard" class="dashboard-panel hidden" aria-label="Panel de usuario">
+      <div class="dashboard-card">
+        <div class="dashboard-header">
+          <div>
+            <h2>Bienvenido, <span id="user-name"></span></h2>
+            <p id="user-details"></p>
+          </div>
+          <div class="dashboard-actions">
+            <button id="go-welcome-button" class="primary-button">Inicia aquí</button>
+            <button id="logout-button" class="secondary-button">Cerrar sesión</button>
+          </div>
+        </div>
+
+        <div class="dashboard-content">
+          <p>Has iniciado sesión correctamente en ClearMind. Aquí podrás comenzar a monitorear tu carga académica y tu bienestar emocional.</p>
+          <ul>
+            <li>Registra tus hábitos de estudio</li>
+            <li>Mide tu energía y estrés</li>
+            <li>Obtén alertas tempranas de sobrecarga</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
