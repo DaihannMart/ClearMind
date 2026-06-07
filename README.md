@@ -2,11 +2,40 @@
 
 ## Alcance funcional
 
-Este proyecto es una aplicación web diseñada para que estudiantes de pregrado y posgrado gestionen sus tiempos de estudio y monitoreen su bienestar emocional.
+Aplicación web para estudiantes que combina temporizador Pomodoro con registro de bienestar emocional
 
-## Qué tendrá el proyecto
+## 🎯 Características
 
-- Registro de usuario con datos como carrera, semestre y lista de materias.
-- Temporizador de estudio web tipo Pomodoro con categorías personalizables por materia.
-- Registro del nivel de energía y nivel de estrés, asociado a cada sesión o materia.
-- Tablero de control web con visualización de métricas según horas de estudio, promedio de estrés por materia y tendencia de productividad.
+- ✅ Registro/Login con Firebase Auth
+- ✅ Temporizador Pomodoro (25 min)
+- ✅ Registro de energía y estrés
+- ✅ Almacenamiento en Firestore
+- ✅ Diseño responsive
+- ✅ Pruebas unitarias y E2E
+- ✅ CI/CD con GitHub Actions
+
+## 🛠️ Tecnologías
+
+| Tipo | Tecnología |
+|------|------------|
+| Frontend | HTML5, CSS3, JS |
+| Autenticación | Firebase Auth |
+| DB | Firebase Firestore |
+| Pruebas | Jest, Playwright |
+| CI/CD | GitHub Actions |
+
+## 📦 Instalación
+
+```bash
+# Clonar
+git clone https://github.com/DaihannMart/ClearMind.git
+cd ClearMind
+
+# Instalar dependencias
+npm install
+
+# Ejecutar pruebas
+npm test
+
+# Ver app
+npx serve frontend
